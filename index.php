@@ -20,9 +20,11 @@ $songTxt = "Si alza dalla sedia del bar chiuso lentamente Cisco e all'improvviso
 
 <body>
 
+
     <h3>Testo della canzone da censurare</h3>
     <div class="txtSong">
-        <p><?php echo $songTxt ?></p>
+        <p><?php echo $songTxt; ?>
+        </p>
         <div class="nws"><?php echo strlen($songTxt) ?></div>
 
     </div>
@@ -36,25 +38,30 @@ $songTxt = "Si alza dalla sedia del bar chiuso lentamente Cisco e all'improvviso
         <button>
             Invia
         </button>
-
+        <button>
+            <a href="./">Reset</a>
+        </button>
     </form>
 
     <p>
 
-        <?php $newSongTxt =  str_replace($_GET["badword"], "***", $songTxt); ?>
+        <?php $newSongTxt =  str_replace($_GET["badword"], "***", $songTxt);
+        // var_dump($_GET) ?>
 
     </p>
 
-    <h3>Testo della canzone censurato</h3>
 
-    <div class="txtSong">
-        <?php echo $newSongTxt; ?>
-        <div class="nws"><?php echo strlen($newSongTxt); ?></div>
+    <div id="nts">
+        <h3>Testo della canzone censurato</h3>
 
+        <div class="txtSong">
+            <?php echo $newSongTxt; ?>
+            <div class="nws">
+                <?php echo strlen($newSongTxt); ?></div>
+
+
+        </div>
     </div>
-
-    <p>
-    </p>
 
 </body>
 

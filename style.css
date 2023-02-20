@@ -21,6 +21,11 @@ h3 {
 
 }
 
+#nts {
+    /* display: none; */
+}
+
+
 .txtSong {
     width: 50%;
     margin: 0 auto;
@@ -33,6 +38,7 @@ h3 {
     border: 1px solid black;
 
 }
+
 
 .nws {
     position: absolute;
@@ -66,4 +72,9 @@ button {
     padding: 8px 12px;
     background-color: red;
     border-radius: 5px;
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
 }
